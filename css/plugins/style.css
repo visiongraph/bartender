@@ -74,6 +74,28 @@
 ====================================================== */
 #menu-item-2597 {  background-image:url(../../imagenes/home/icon-inicio.png); background-position:center 20px; background-repeat:no-repeat;}
 #menu-item-2597 :hover {  background-image:url(../../imagenes/home/icon-inicio-roll.png); background-position:center top; background-repeat:no-repeat;}
+
+#menu-item-2632 {  background-image:url(../../imagenes/home/icon-empresa.png); background-position:center 20px; background-repeat:no-repeat;}
+#menu-item-2632 :hover {  background-image:url(../../imagenes/home/icon-empresa-roll.png); background-position:center top; background-repeat:no-repeat;}
+
+#menu-item-2621 {  background-image:url(../../imagenes/home/icon-academia.png); background-position:center 20px; background-repeat:no-repeat;}
+#menu-item-2621 :hover {  background-image:url(../../imagenes/home/icon-academia-roll.png); background-position:center top; background-repeat:no-repeat;}
+
+#menu-item-2609 {  background-image:url(../../imagenes/home/icon-servicios.png); background-position:center 20px; background-repeat:no-repeat;}
+#menu-item-2609 :hover {  background-image:url(../../imagenes/home/icon-servicios-roll.png); background-position:center top; background-repeat:no-repeat;}
+
+#menu-item-2610 {  background-image:url(../../imagenes/home/icon-multimedia.png); background-position:center 20px; background-repeat:no-repeat;}
+#menu-item-2610 :hover {  background-image:url(../../imagenes/home/icon-multimedia-roll.png); background-position:center top; background-repeat:no-repeat;}
+
+#menu-item-2418 {  background-image:url(../../imagenes/home/icon-inicio.png); background-position:center 20px; background-repeat:no-repeat;}
+#menu-item-2418 :hover {  background-image:url(../../imagenes/home/icon-inicio-roll.png); background-position:center top; background-repeat:no-repeat;}
+
+#menu-item-2226 {  background-image:url(../../imagenes/home/icon-inicio.png); background-position:center 20px; background-repeat:no-repeat;}
+#menu-item-2226 :hover {  background-image:url(../../imagenes/home/icon-inicio-roll.png); background-position:center top; background-repeat:no-repeat;}
+
+
+
+
 .icon img {
     width: auto;
 }
@@ -1529,6 +1551,12 @@ border-radius: 15px;
   border-radius: 6px;
   background: #f2f2f2;
   color: #343434;
+}
+
+.section-title {
+  position: relative;
+  margin: 30px 0 30px 0;
+  width:100%;
 }
 
 .call-to-action-section .icon {
