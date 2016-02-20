@@ -1007,15 +1007,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 #header .small-menu ul li {
   font-size: 12px;
-  color: #b2afaf;
+  color: #1A1A1A;
 }
 
 #header .small-menu ul li a {
-  color: #b2afaf;
+  color: #1A1A1A;
 }
 
 #header .small-menu ul li a:hover {
-  color: #e00000;
+  color: #000000;
+  font-weight: bold;
 }
 
 #header .small-menu .choose-option {
@@ -3677,7 +3678,7 @@ color:#FFF;
   height: auto;
   padding: 75px 0;
   text-align: center;
-  background: url(../img/content/heading-bg.jpg) top center no-repeat;
+  background: url(../../imagenes/home/heading-bg.jpg) top center no-repeat;
   background-size: cover;
 }
 
