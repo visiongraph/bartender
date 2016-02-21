@@ -1617,8 +1617,8 @@ color:#FFF;
 
 }
 .servicios{
-	background-image:url(../../imagenes/home/fondo-servicios.jpg)
-
+	background-image:url(../../imagenes/home/fondo-servicios.jpg);
+	background-size: cover;
 }
 
 .category-boxes-icons {
@@ -4318,7 +4318,7 @@ h5 a:hover { color: #666; }
   width: 100%;
   background-color: #f3f3f3;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   margin-top: 30px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -4522,7 +4522,7 @@ h5 a:hover { color: #666; }
 /* news-events-blog side panel */
 .page-content .widget {
   padding: 0 20px;
-  border-bottom: 1px solid #ccc;
+  /*border-bottom: 1px solid #ccc;*/
 }
 
 .widget h5 {
@@ -4546,7 +4546,7 @@ h5 a:hover { color: #666; }
 .widget .blog-latest .blog-latest-img {
   position: absolute;
   left: 0;
-  top: 15px;
+  top: 40px;
   height: 90px;
   width: 90px;
   border-radius: 4px;
@@ -4562,6 +4562,8 @@ h5 a:hover { color: #666; }
   position: relative;
   padding-left: 110px;
   width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .widget .blog-latest h5 {
