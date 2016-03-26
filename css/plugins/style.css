@@ -3672,7 +3672,16 @@ color:#FFF;
   height: auto;
   overflow: hidden;
 }
-
+.page-content .heading-academia {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  text-align: center;
+  background:url(../../imagenes/home/fondo-academia.jpg); 
+  background-attachment:fixed;
+  background-size: cover;
+  background-position:center;
+}
 .page-content .heading {
   width: 100%;
   height: auto;

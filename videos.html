@@ -22,6 +22,9 @@
 		<link rel='stylesheet' id='uou-style-css'  href='css/plugins/style.css?ver=4.0.8' type='text/css' media='all' />
 		<link rel='stylesheet' id='responsive-css'  href='css/responsive.css?ver=4.0.8' type='text/css' media='all' />
 		<link rel='stylesheet' id='masterslider-style-css'  href='css/masterslider.css?ver=4.0.8' type='text/css' media='all' />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
 		<script type='text/javascript' src='js/jquery.js?ver=1.11.1'></script>
 		<script type='text/javascript' src='js/jquery-migrate.min.js?ver=1.2.1'></script>
 		<script type='text/javascript' src='js/jquery.ui.core.min.js?ver=1.10.4'></script>
@@ -128,7 +131,11 @@
 									<a rel="v:url" property="v:title" href="index.html">Inicio</a>
 								</span>&nbsp;&nbsp; 
 								<i class="fa fa-chevron-right"></i> &nbsp;&nbsp;
-								<span class="current">Galerías</span>
+								<span typeof="v:Breadcrumb">
+									<a rel="v:url" property="v:title" href="galerias.html">Galerías</a>
+								</span>&nbsp;&nbsp;
+								<i class="fa fa-chevron-right"></i> &nbsp;&nbsp;
+								<span class="current">Videos</span>
 							</li>
 						</ul>
 					</div>
@@ -137,82 +144,62 @@
 			
 			<div class="page-content">        
 				<div class="heading">                
-					<h1>Galería</h1>            
+					<h1>Videos</h1>            
 				</div>
 				<br>
-				<div class="category-boxes-icons">
-					<div class=" container">
-						<div class="row">													
-							<div class="col-md-4 col-sm-6 col-xs-6 text-center">
-								<div class="category-boxes-item">
-									<figure>
-										<img src="imagenes/home/img-bartenderbar.jpg" alt="">									
-										<h4>Campeonato local t.g.i. Fridays Altamira 2012</h4>
-										<figcaption>
-											<a href="galeria_1.html" class="btn btn-default-white"><i class="fa fa-file-text-o"></i> Ver galería </a>
-										</figcaption>									
-								  </figure>
-								</div>
-							</div>												
-							<div class="col-md-4 col-sm-6 col-xs-6 text-center">
-								<div class="category-boxes-item">
-									<figure>
-										<img src="imagenes/home/img-luxurybar.jpg" alt="">									
-										<h4>Luxury Bar</h4>
-										<figcaption>
-											<a href="servicios.html#serv2" class="btn btn-default-white"><i class="fa fa-file-text-o"></i> Ver galería</a>
-										</figcaption>								
-								  </figure>
-								</div>
-							</div>		
-							<div class="col-md-4 col-sm-6 col-xs-6 text-center">
-								<div class="category-boxes-item">
-									<figure>
-										<img src="imagenes/home/img-platinumbar.jpg" alt="">									
-										<h4>Platinum Bar</h4>
-										<figcaption> 
-											<a href="servicios.html#serv3" class="btn btn-default-white"><i class="fa fa-file-text-o"></i> Ver galería </a>
-										</figcaption>							
-									</figure>
-								</div>
-							</div>		
-
-							<div class="col-md-4 col-sm-6 col-xs-6 text-center">
-								<div class="category-boxes-item">
-									<figure>
-										<img src="imagenes/home/img-bartenderbar.jpg" alt="">									
-										<h4>Bartender Profesional</h4>
-										<figcaption>
-											<a href="servicios.html#serv4" class="btn btn-default-white"><i class="fa fa-file-text-o"></i> Ver galería </a>
-										</figcaption>									
-								  </figure>
-								</div>
-							</div>												
-							<div class="col-md-4 col-sm-6 col-xs-6 text-center">
-								<div class="category-boxes-item">
-									<figure>
-										<img src="imagenes/home/img-luxurybar.jpg" alt="">									
-										<h4>Luxury Bar</h4>
-										<figcaption>
-											<a href="servicios.html#serv5" class="btn btn-default-white"><i class="fa fa-file-text-o"></i> Ver galería</a>
-										</figcaption>								
-								  </figure>
-								</div>
-							</div>		
-							<div class="col-md-4 col-sm-6 col-xs-6 text-center">
-								<div class="category-boxes-item">
-									<figure>
-										<img src="imagenes/home/img-platinumbar.jpg" alt="">									
-										<h4>Platinum Bar</h4>
-										<figcaption> 
-											<a href="servicios.html#serv6" class="btn btn-default-white"><i class="fa fa-file-text-o"></i> Ver galería </a>
-										</figcaption>							
-									</figure>
-								</div>
-							</div>										
-						</div>
-					</div>
-				</div>
+				<div id="grid-gallery" class="grid-gallery">
+					<section class="grid-wrap">
+						<ul class="grid">
+							<li class="grid-sizer"></li><!-- for Masonry column width -->
+							<li>
+								<figure>
+									<img src="imagenes/home/galerias/galeria1/thumb/cocktail-party-girls.jpg" alt="img01"/>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="imagenes/home/galerias/galeria1/thumb/cocktail2.jpg" alt="img01"/>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="imagenes/home/galerias/galeria1/thumb/3.png" alt="img01"/>
+								</figure>
+							</li>
+						</ul>
+					</section><!-- // grid-wrap -->
+					<section class="slideshow">
+						<ul>
+							<li>
+								<figure>
+									<img src="imagenes/home/galerias/galeria1/large/cocktail-party-girls.jpg" alt="img01"/>
+								</figure>
+							</li>					
+							<li>
+								<figure>
+									<!--<figcaption>
+										<h3>Vice velit chia</h3>
+										<p>Chillwave Echo Park Etsy organic Cosby sweater seitan authentic pour-over. Occupy wolf selvage bespoke tattooed, cred sustainable Odd Future hashtag butcher.</p>
+									</figcaption>-->
+									<img src="imagenes/home/galerias/galeria1/large/cocktail2.jpg" alt="img02"/>
+								</figure>
+							</li>	
+							<li>
+								<figure>
+									<img src="imagenes/home/galerias/galeria1/large/3.png" alt="img03"/>
+								</figure>
+							</li>
+						</ul>
+						<nav>
+							<span class="icon nav-prev"></span>
+							<span class="icon nav-next"></span>
+							<span class="icon nav-close"></span>
+						</nav>
+						<div class="info-keys icon">Navigate with arrow keys</div>
+					</section><!-- // slideshow -->
+				</div><!-- // grid-gallery -->
+				
+				
 				<br>
 			</div>
     
@@ -344,5 +331,12 @@
 		<script type='text/javascript' src='js/ngProgress.min.js?ver=4.0.8'></script>
 		<script type='text/javascript' src='js/angular-custom.js?ver=4.0.8'></script>
 		<script type='text/javascript' src='js/add-to-cart-variation.min.js?ver=4.0.8'></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/cbpGridGallery.js"></script>
+		<script>
+			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+		</script>		
 	</body>
 </html>
