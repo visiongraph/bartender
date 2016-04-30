@@ -3687,7 +3687,8 @@ color:#FFF;
   height: auto;
   padding: 75px 0;
   text-align: center;
-  background: url(../../imagenes/home/heading-bg.jpg) top center no-repeat;
+  background: url(../../imagenes/empresa/barraempresa.jpg) top center no-repeat;
+  background-attachment:fixed;
   background-size: cover;
 }
 
