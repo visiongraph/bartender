@@ -3657,8 +3657,27 @@ color:#FFF;
   color: #e00000;
 }
 
+#videopromo {
+	width:100%;
+	min-height:320px;
+	height:auto;
+	border-radius:10px;
+	margin-bottom:20px;
+	border:#fff solid 8px;
+}
 
+.bartender img{
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.comas {font-size:16px !important;
+color:#F00;
 
+}
 
 /* chef page */
 /* ====================================================== */
@@ -3674,8 +3693,8 @@ color:#FFF;
 }
 .page-content .heading-academia {
   width: 100%;
-  height: auto;
-  padding: 20px 0;
+  height:auto;
+  padding: 0px 0;
   text-align: center;
   background:url(../../imagenes/home/fondo-academia.jpg); 
   background-attachment:fixed;
