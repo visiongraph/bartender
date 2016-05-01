@@ -3674,9 +3674,41 @@ color:#FFF;
         filter: FlipH;
         -ms-filter: "FlipH";
 }
-.comas {font-size:16px !important;
-color:#F00;
 
+.quote {
+
+
+  line-height: 2em !important;
+  width:80%;
+  text-align:center;
+  display:inline-block;
+}
+.comas  {
+
+margin-top:0px;
+ quotes: "\201C""\201D""\2018""\2019";
+ display:inline-block;
+  line-height: 0.1em !important;
+
+  }
+.comas:before {
+  color: #666666;
+  content: open-quote;
+  font-size: 6em;
+  line-height: 0.1em;
+  margin-right: 0em;
+  vertical-align: 0.1em;
+
+
+
+}
+.comas:after{
+  color: #666666;
+  content: close-quote;
+  font-size: 6em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.5em;
 }
 
 /* chef page */
