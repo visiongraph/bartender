@@ -19,7 +19,7 @@ jQuery( function( $ ) {
         scrollwheel: false, 
         disableDoubleClickZoom: true ,
         maptype: 'ROADMAP' ,
-        zoom: 12 
+        zoom: 15 
 
     }) ;
 
