@@ -252,21 +252,21 @@ Sábados: 8am - 4pm <br>
 												<div class="col-md-12">
 													<p>
 														<span class="wpcf7-form-control-wrap your-name">
-															<input type="text" name="nombre_bar" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Nombre*" />
+															<input type="text" name="nombre_bar" value="" maxlength="50" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Nombre*" />
 														</span>
 													</p>
 												</div>
 												<div class="col-md-6 col-sm-6">
 													<p>
 														<span class="wpcf7-form-control-wrap your-email">
-															<input type="email" name="email_bar" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" placeholder="Email*" />
+															<input type="email" name="email_bar" value="" maxlength="100" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" placeholder="Email*" />
 														</span>
 													</p>
 												</div>
 												<div class="col-md-6 col-sm-6">
 													<p>
 														<span class="wpcf7-form-control-wrap your-subject">
-															<input type="text" name="telefono_bar" value="" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Teléfono" />
+															<input type="text" name="telefono_bar" value="" maxlength="20" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Teléfono" />
 														</span>
 													</p>
 												</div>
@@ -274,7 +274,7 @@ Sábados: 8am - 4pm <br>
 											<p><!-- end nasted .row --></p>
 											<p>
 												<span class="wpcf7-form-control-wrap your-message">
-													<textarea name="mensaje_bar" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Tu mensaje"></textarea>
+													<textarea name="mensaje_bar" cols="40" rows="10" maxlength="200" class="wpcf7-form-control wpcf7-textarea" placeholder="Tu mensaje"></textarea>
 												</span>
 											</p>
 											<p class="button-submit"><input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit" /></p>

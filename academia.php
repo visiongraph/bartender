@@ -419,7 +419,7 @@ Horario
 														<span class="obligatorio">*</span> Teléfono:
 														<input type="text" placeholder="Codigo de Area y Teléfono" value="" maxlength="20" name="telefono" id="telefono" /><br>
 														<span class="obligatorio">*</span> Correo:
-														<input type="text" placeholder="Correo válido" value="" name="email" maxlength="50" id="email" /><br>
+														<input type="text" placeholder="Correo válido" value="" name="email" maxlength="100" id="email" /><br>
 														<span class="obligatorio">*</span> Edad:
 														<input type="text" placeholder="Debes ser mayor de edad +18" value="" maxlength="2" name="edad" id="edad" /><br>
 														<span class="obligatorio">*</span> Cédula de Identidad:

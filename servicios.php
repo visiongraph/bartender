@@ -336,7 +336,7 @@
 														<span class="obligatorio">*</span> Teléfono:
 														<input type="text" placeholder="Codigo de Area y Teléfono" value="" maxlength="20" name="telefono" id="telefono" /><br>
 														<span class="obligatorio">*</span> Correo:
-														<input type="text" placeholder="Correo válido" value="" name="email" maxlength="50" id="email" /><br>
+														<input type="text" placeholder="Correo válido" value="" name="email" maxlength="100" id="email" /><br>
 														<span class="obligatorio">*</span> Tipo de Evento:<br>
 														<select name="tipo_evento" id="tipo_evento">
 															<option value="Corporativo">Evento Corporativo</option>
