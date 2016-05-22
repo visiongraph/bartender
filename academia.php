@@ -1,6 +1,6 @@
 <?php
 	function getTemplate(){
-		$ruta = 'mail/solicitud_template.php';
+		$ruta = 'mail/inscripcion_template.php';
 		if (is_file($ruta)) {
 			ob_start();
 			include $ruta;
@@ -22,19 +22,19 @@
 		$mail->CharSet = 'UTF-8';
 		$body = getTemplate();		
 	
-		$mail->Subject = 'Solicitud de presupuesto';
-				
+		$mail->Subject = 'Información de Inscripción de '. $_POST['nombre'];
 		$body = sprintf($body,
 						$_POST['nombre'],
 						$_POST['email'],
 						$_POST['telefono'],
-						$_POST['tipo_evento'],
-						$_POST['empresa'],
-						$_POST['cant_invitados'],
-						$_POST['fecha_evento'],
-						$_POST['dir_evento'],
-						$_POST['tipo_servicio'],
-						$_POST['detalles']);
+						$_POST['edad'],
+						$_POST['cedula'],
+						$_POST['direccion'],
+						$_POST['curso'],
+						$_POST['deposito'],
+						$_POST['fecha_deposito'],
+						$_POST['banco'],
+						$_POST['mensaje']);
 		$mail->Body = $body; 
 		
 		if(!$mail->Send()) {
@@ -80,7 +80,7 @@
 		<style type="text/css" title="dynamic-css" class="options-output">
 			body{text-align:inherit;line-height:undefinedpx;font-weight:400;}
 			h1,h2,h3,h4,h5{line-height:undefinedpx;}
-		</style>            
+		</style> 
 		<script>
 			function validateForm() {
 				var x = document.forms["forma_solicitud"]["nombre"].value;
@@ -98,42 +98,51 @@
 					alert("Debe colocar el Email");
 					return false;
 				}
-				
-				var x = document.forms["forma_solicitud"]["tipo_evento"].value;
+				var x = document.forms["forma_solicitud"]["edad"].value;
 				if (x == null || x == "") {
-					alert("Debe indicar el tipo de evento");
+					alert("Debe indicar su edad");
 					return false;
 				}
-				var x = document.forms["forma_solicitud"]["cant_invitados"].value;
+				var x = document.forms["forma_solicitud"]["cedula"].value;
 				if (x == null || x == "") {
-					alert("Debe indicar la cantidad de invitados");
+					alert("Debe indicar su cédula de identidad");
 					return false;
 				}
-				var x = document.forms["forma_solicitud"]["fecha_evento"].value;
+				var x = document.forms["forma_solicitud"]["direccion"].value;
 				if (x == null || x == "") {
-					alert("Debe indicar la fecha del evento");
+					alert("Debe indicar su dirección");
 					return false;
 				}
-				var x = document.forms["forma_solicitud"]["dir_evento"].value;
+				var x = document.forms["forma_solicitud"]["curso"].value;
 				if (x == null || x == "") {
-					alert("Debe indicar la direcció del evento");
+					alert("Debe indicar el curso al que desea asistir");
 					return false;
 				}	
-				var x = document.forms["forma_solicitud"]["tipo_servicio"].value;
+				var x = document.forms["forma_solicitud"]["deposito"].value;
 				if (x == null || x == "") {
-					alert("Debe indicar el tipo de servicio deseado");
+					alert("Debe indicar el número del deposito");
 					return false;
-				}				
+				}	
+				var x = document.forms["forma_solicitud"]["fecha_deposito"].value;
+				if (x == null || x == "") {
+					alert("Debe indicar la fecha en la que realizó el deposito");
+					return false;
+				}		
+				var x = document.forms["forma_solicitud"]["banco"].value;
+				if (x == null || x == "") {
+					alert("Debe indicar el banco en el cual realizó el deposito");
+					return false;
+				}						
 			}		
-		</script>		
+		</script>				
 	</head>
 	<body class="home page page-id-1839 page-template page-template-template-front-page-php"> 
 		<?php if ($enviado) { ?>		
 			<div id="caja-mensaje">
-				 Su solicitud se envió con éxito. Un representante de ventas se pondr&aacute; en contacto con usted a la brevedad &nbsp;&nbsp;&nbsp;&nbsp;
+				 La informaci&oacute;n de su inscripci&oacute;n se envió con éxito. Pronto recibir&aacute; la confirmaci&oacute;n de la misma&nbsp;&nbsp;&nbsp;&nbsp;
 				 <input type="button" value="OK" class="wpcf7-form-control wpcf7-submit" onclick="document.getElementById('caja-mensaje').hidden = true;"/>
 			</div>
-		<?php } ?>	
+		<?php } ?>		
 		<div id="main-wrapper">
 			<header id="header">
 				<div class="header-top-bar">
@@ -223,31 +232,49 @@
 									<a rel="v:url" property="v:title" href="index.html">Inicio</a>
 								</span>&nbsp;&nbsp; 
 								<i class="fa fa-chevron-right"></i> &nbsp;&nbsp;
-								<span class="current">Servicios</span>
+								<span class="current">Academia</span>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</header>
-			
-			<div class="page-content">        
-				<div class="headingser">                
-					<h1>Servicios</h1>            
+			<div class="page-content">                      
+				<div class="heading-academia">                
+					<div class="container">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+							<br><br><br>
+							<img src="imagenes/home/academy-logo.png"> <br><br><br>
+
+						  <span class="comas"><div class="quote">Un cocktail es una bebida creada con imaginaci&oacute;n y cuyo &uacute;nico objetivo es la busqueda incansable del deleite y la estimulaci&oacute;n de los sentidos.</div></span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " style="margin-top:60px">
+                        <iframe id="videopromo" src="https://www.youtube.com/embed/6slJ-Q3GRIY" frameborder="0" allowfullscreen></iframe>
+						
+						</div>
+						<div class="bartender">
+						<img src="imagenes/academia/barra.png">
+						</div>
+					</div>    
 				</div>
+				
+				
+				
+				
+               
 				<div class="news-events-blog">    
 					<div class="container">                    
 						<div class="row">                        
 							<div class="col-md-8">
-								<a name="serv1"></a>
+                            <a name="serv1"></a>
 								<div id= "post-2513" class="post-2513 news type-news status-publish has-post-thumbnail hentry blog-list">                                    
 									<div class="row">                                        
 										<div class="col-md-4 col-sm-4">                                    
 											<div class="blog-list-img">
-												<img src= "imagenes/home/img-bartenderbar2.jpg" alt= "news-event-image">                                                                                                        
+												<img src= "imagenes/academia/cursos/bartenderoctubre.jpg" alt= "news-event-image">                                                                                                        
 											</div>                                            
 										</div>                                    
 										<div class="col-md-8 col-sm-8">
-											<h5><a href="#">Bartender Profesional</a></h5>                                                
+											<h5><a href="curso_mayo2016.html">Certificate como Bartender Profesional “Mayo; 2016 Inscripciones Abiertas”</a></h5>                                                
 											<!--<ul class="list-inline">
 												<li class="place">
 													<i class="fa fa-map-marker"></i><span class="bl-sort">in</span>Cincinnati, Ohio                                                    
@@ -258,11 +285,46 @@
 											</ul>-->
 											<div class="bl-sort">
 												<p>
-													Sweet turkish, ristretto rich, fair trade, trifecta, latte eu variety single shot 
-													robusta ristretto. Filter sit, caffeine foam half and turkish, ristretto rich, fair 
-													trade, trifecta, latte eu variety single shot robusta ristretto. Filter sit, caffeine 
-													foam half and<br>
+												Academia Tubartender crea el curso más completo en el área de bar, pensando en el incremento de nuevos profesionales al maravilloso mundo de la gastronomía, ofrece la oportunidad de Certificar profesionales con el curso mixto de cocteleria y Flair.
+
+<br><br>
+<a  href="curso_mayo2016.html" target="_self" class="btn btn-default-red "><i class="fa fa-file-text-o"></i> Ver Detalles </a>
 												
+												</p>                                                     
+											</div>                                                                                         
+										</div>
+									</div>
+								</div>
+								<a name="serv1"></a>
+								<div id= "post-2513" class="post-2513 news type-news status-publish has-post-thumbnail hentry blog-list">                                    
+									<div class="row">                                        
+										<div class="col-md-4 col-sm-4">                                    
+											<div class="blog-list-img">
+												<img src= "imagenes/academia/cursos/workingflair1.jpg" alt= "news-event-image">                                                                                                        
+											</div>                                            
+										</div>                                    
+										<div class="col-md-8 col-sm-8">
+											<h5><a href="curso_flair.html">Curso de Working Flair</a></h5>                                                
+											<!--<ul class="list-inline">
+												<li class="place">
+													<i class="fa fa-map-marker"></i><span class="bl-sort">in</span>Cincinnati, Ohio                                                    
+												</li>                                                                                                
+												<li class="date">
+													<i class="fa fa-calendar"></i>November 23, 2014 at 8:47 pm                                                    
+												</li>
+											</ul>-->
+											<div class="bl-sort">
+												<p>
+													Título obtenido
+Flairbartender Nivel Básico - Medio
+Horario
+Disponible en dos bloques:
+9:00 am a 12:30 pm
+1:00 pm a 4:30 pm
+Cantidad de cupos: 8
+
+<br><br>
+<a  href="curso_flair.html" target="_self" class="btn btn-default-red "><i class="fa fa-file-text-o"></i> Ver Detalles </a>
 												</p>                                                     
 											</div>                                                                                         
 										</div>
@@ -273,22 +335,29 @@
 									<div class="row">
 										<div class="col-md-4 col-sm-4">
 											<div class="blog-list-img">
-												<img src= "imagenes/home/img-luxurybar2.jpg" alt= "news-event-image">
+												<img src= "imagenes/academia/cursos/cafemix1.jpg" alt= "news-event-image">
 											</div>
 										</div>
 										<div class="col-md-8 col-sm-8">
-											<h5><a href="#">Luxury Bar</a></h5>
+											<h5><a href="curso_mix_cafe.html">Master Class Mixólogo del Café</a></h5>
 											<!--<ul class="list-inline">
 												<li class="place"><i class="fa fa-map-marker"></i><span class="bl-sort">in</span>Baltimore, Maryland</li>
 												<li class="date"><i class="fa fa-calendar"></i>November 16, 2014 at 9:07 am</li>
 											</ul>-->
 											<div class="bl-sort">
 												<p>
-													<b>¿Estas buscando exclusividad, elegancia  e innovación en un solo servicio?</b> <br><br>
-													Para ello te ofrecemos nuestro servicio Luxury bar donde podrás disfrutas del Glamour y 
-													el lujo de los más exquisitos cocteles,  y las más modernas tendencias de Coctelería a 
-													nivel mundial. Con este servicio también le brindamos la opción de tener una barra de 
-													vinos en su evento utilizando los mejores productos del mercado.<br>													
+													Instructor:
+Diego Rivas Franquiz (Barista - Mixólogo)	
+
+Horario:
+8:00 am a 6:00 pm
+Duración:
+1 día (10 horas académicas)
+Incluye:
+Manual Digital
+Certificado<br>
+<br>
+<a  href="curso_mix_cafe.html" target="_self" class="btn btn-default-red "><i class="fa fa-file-text-o"></i> Ver Detalles </a>
 												</p>
 											</div>
 										</div>
@@ -299,74 +368,96 @@
 									<div class="row">
 										<div class="col-md-4 col-sm-4">
 											<div class="blog-list-img">
-												<img src= "imagenes/home/img-platinumbar2.jpg" alt= "news-event-image">
+												<img src= "imagenes/academia/cursos/mixologia.jpg" alt= "news-event-image">
 											</div>
 										</div>
 										<div class="col-md-8 col-sm-8">
-											<h5><a href="#">Platinum Bar</a></h5>
+											<h5><a href="curso_mixologia.html">Curso de Mixología (avanzado)</a></h5>
 											<!--<ul class="list-inline">
 												<li class="place"><i class="fa fa-map-marker"></i><span class="bl-sort">in</span>Baltimore, Maryland</li>
 												<li class="date"><i class="fa fa-calendar"></i>November 16, 2014 at 9:07 am</li>
 											</ul>-->
 											<div class="bl-sort">
 												<p>
-													Diseñado para ofrecer experiencias inolvidables, donde la elegancia es nuestra bandera para hacer de su evento una noche inolvidable. Nuestros cocteles platinium están preparados con productos e ingredientes Premium, buscando siempre complacer los paladares más exigentes. <br>
-													
+												
+Mixologo Profesional
+para
+Profesionales del área no certificados
+y Personas que deseen profesionalizarse en corto tiempo para trabajar en forma inmediata
+Oportunidad para las personas que se van a vivir a otro país
+
+Horario
+8:00 am a 4:00 pm
+
+<br>
+<br>
+<a  href="curso_mixologia.html" target="_self" class="btn btn-default-red "><i class="fa fa-file-text-o"></i> Ver Detalles </a>
 												</p>
 											</div>
 										</div>
 									</div>
 								</div>
-														
-							</div>
+							</div>	
 							<div class="col-md-4">
-                            
 								<div class="events-side-panel">
+							
 									<div class="widget">
-										<h5>Solicitar Presupuesto</h5> <br>    
-										<p style="text-align:justify; font-size:14px; color:#5e5e5e">
-											Por favor rellenar formulario a continuación<b></b>
+                                  
+										<h5>Inscribete Curso Aquí</h5> <br>    
+                                        <p style="text-align:justify; font-size:14px; color:#5e5e5e">
+										Por favor emitir depósitos a: <br>
+										<b>Inversiones Tubartender C.A. Rif: J-29704358-6</b><br>
+										Banco:<b> Banco Bicentenario</b> <br>
+										Cuenta Corriente:<b> No. 01750486010071575154</b>
 										</p>   
 										<div class="blog-latest">
 											<div class="row">
-												<form name="forma_solicitud" action="servicios.php" method="post" class="searchform"  onsubmit="return validateForm();">
+												<form name="forma_inscripcion" action="academia.php" method="post" class="searchform"  onsubmit="return validateForm();">
 													<div class="search-keyword">
 														<span class="obligatorio">*</span> Nombre y Apellido:<br>
-														<input type="text" placeholder="Nombre Completo" value="" maxlength="50" name="nombre" id="nombre" /><br>
+														<input type="text" placeholder="Nombre Completo" value="" name="nombre" maxlength="50" id="nombre" /><br>
 														<span class="obligatorio">*</span> Teléfono:
 														<input type="text" placeholder="Codigo de Area y Teléfono" value="" maxlength="20" name="telefono" id="telefono" /><br>
 														<span class="obligatorio">*</span> Correo:
 														<input type="text" placeholder="Correo válido" value="" name="email" maxlength="50" id="email" /><br>
-														<span class="obligatorio">*</span> Tipo de Evento:<br>
-														<select name="tipo_evento" id="tipo_evento">
-															<option value="Corporativo">Evento Corporativo</option>
-															<option value="familiar">Evento Familiar</option>
+														<span class="obligatorio">*</span> Edad:
+														<input type="text" placeholder="Debes ser mayor de edad +18" value="" maxlength="2" name="edad" id="edad" /><br>
+														<span class="obligatorio">*</span> Cédula de Identidad:
+														<input type="text" placeholder="Debes ser mayor de edad +18" value="" name="cedula" maxlength="11" id="cedula" />
+														<span class="obligatorio">*</span> Dirección de Residencia:<br>
+														<input type="text" placeholder="ejemplo: Urb. Moltalban1 / Caracas" value="" name="direccion" maxlength="150" id="direccion" />
+														<span class="obligatorio">*</span> Selecciona el Curso deseado:<br>
+														<select id="curso" name="curso">
+															<option value=""></option>
+															<option value="flair">Curso de Working Flair</option>
+															<option value="mastercafe">Master Class Mixólogo del Café</option> 
+															<option value="mixoavanzado">Curso de Mixología Avanzado</option>
 														</select><br>
-														Nombre de la empresa:
-														<input type="text" placeholder="Si es un evento corporativo" value="" maxlength="70" name="empresa" id="empresa" /><br>
-														<span class="obligatorio">*</span> Cantidad de Invitados:
-														<input type="text" placeholder="Número de invitados al evento" maxlength="6"  value="" name="cant_invitados" id="cant_invitados" />
-														<span class="obligatorio">*</span> Fecha del Evento:<br>
-														<input type="text" placeholder="dd/mm/aaaa ejemplo: 08/11/1978" value="" maxlength="10" name="fecha_evento" id="fecha_evento" /><br>
-														<span class="obligatorio">*</span> Dirección del Evento:<br>
-														<input type="text" placeholder="ejemplo: Urb. Moltalban1 / Caracas" value="" maxlength="150" name="dir_evento" id="dir_evento" />
-														<span class="obligatorio">*</span> Selecciona Servicio Deseado:<br>
-														<select id="tipo_servicio" name="tipo_servicio">
-															<option value="Bartender_Profesional">Barra Bartender Profesional</option>
-															<option value="Luxury">Luxury Bar</option>
-															<option value="Kids">Kids Bar</option>
+														<span class="obligatorio">*</span> Numero de Depósito:<br>
+														<input type="text" placeholder="Numero de depósito completo" value="" name="deposito" maxlength="25" id="deposito" /><br>
+														<span class="obligatorio">*</span> Fecha de Depósito:<br>
+														<input type="text" placeholder="dd/mm/aaaa ejemplo: 08/11/1978" value="" name="fecha_deposito" maxlength="10" id="fecha_deposito" /><br>
+														<span class="obligatorio">*</span> Banco Depositado:<br>
+														<select id="banco" name="banco">
+															<option value="Bicentenario">Banco Bicentenario</option>
 														</select><br>
-														Detalles del Evento Mensaje:<br>
-														<textarea name="detalles" cols="" rows="8" id="detalles" maxlength="200"></textarea>
+														Mensaje:<br>
+														<textarea name="mensaje" cols="" rows="8" id="mensaje" maxlength="200"></textarea>
 														<p class="button-submit" style="width:auto !important;">
-															<input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit aligncenter" />														
+															<input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit aligncenter" />
 														</p>
-														<div style="text-align: right; font-size: 10px; width:100%; margin-bottom: -25px;">(<span class="obligatorio">*</span>) Campo obligatorio</div>
 													</div>
 												</form>
-												<div class="nota"></div>
+												<div class="nota" >
+													<h5><a href="#">Nota</a></h5>
+													<p class="bl-sort">Todos los participantes deben ser mayor de edad y ser residentes en Venezuela.</p>
+												</div>
+												<div style="text-align: right; font-size: 10px; width:100%; margin-bottom: -15px;">(<span class="obligatorio">*</span>) Campo obligatorio</div>
 											</div>
-										</div>									
+										</div>
+										
+		
+																				
 									</div>
 								</div>
 							</div>
