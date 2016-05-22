@@ -162,3 +162,16 @@ a img {
 	margin:10px;
 	border:5px solid #CCC;
 }
+
+#caja-mensaje {
+	z-index: 1000; 
+	position: absolute; 
+	text-align: center;
+	width: 60%; 
+	margin: 20%;
+	margin-top: 180px; 
+	background-color:#F3F3F3;
+	padding: 10px;
+	border:1px solid #000;
+	border-radius: 10px;
+}
